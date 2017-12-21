@@ -25,10 +25,10 @@ export default props => {
                 {props.item.title}
             </div>
             <div className="col s2">
-                <Modal callback={() => props.delete(props.index)} text={modalMessage} className="btn btn-floating red">
+                <Modal callback={() => props.delete(props.item._id)} text={modalMessage} className="btn btn-floating red">
                     <i className="material-icons">delete_forever</i>
                 </Modal>
-                <button onClick={() => props.complete(props.index)} className={`btn btn-floating ${ complete ? 'yellow' : 'green'}`}>
+                <button onClick={() => props.complete(props.item._id)} className={`btn btn-floating ${ complete ? 'yellow' : 'green'}`}>
                     <i className="material-icons">{ complete ? 'undo' : 'check'}</i>
                 </button>
             </div>
